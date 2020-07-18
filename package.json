@@ -21,11 +21,14 @@
     "@angular/platform-browser-dynamic": "^9.1.9",
     "@angular/router": "^9.1.9",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
+    "@types/crypto-js": "^3.1.47",
+    "@types/cryptojs": "^3.1.29",
     "@types/jquery": "^3.3.38",
     "bootstrap": "^4.5.0",
     "core-js": "^2.5.0",
     "crypto-js": "^4.0.0",
     "jquery": "^3.5.1",
+    "ngx-bootstrap": "^5.1.1",
     "popper.js": "^1.16.1",
     "rxjs": "^6.5.5",
     "save": "^2.4.0",
@@ -58,5 +61,10 @@
   },
   "browser": {
     "crypto": false
+  },
+  "comments": {
+    "dependencies": "we use jQuery because of reasons",
+    "//@types/jquery": "^3.3.38",
+    "//jquery": "^3.5.1"
   }
 }

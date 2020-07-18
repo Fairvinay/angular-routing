@@ -17,8 +17,10 @@ import { PaytmService } from './services/paytm.service';
 import { HttpClientModule } from '@angular/common/http';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './components/modal/modal.component';
+import { DashboardComponent } from './home/dashboard/dashboard.component';
 import {  HTTP_INTERCEPTORS } from '@angular/common/http';
 import { httpInterceptorProviders } from './http-interceptors/index';
+import { CarouselModule } from 'ngx-bootstrap';
 
 /*import { J } from 'jquery';
 declare var J: any;
@@ -35,7 +37,8 @@ console.log(`jQuery version: J{J.fn.jquery}`);*/
     IndexModule,
     NgbModule,
     NoPageModule, FormsModule , ReactiveFormsModule , HttpClientModule, 
-    RouterModule.forRoot(routes, { useHash: true })
+    RouterModule.forRoot(routes, { useHash: true }),
+    CarouselModule.forRoot()
 
   ],
   entryComponents:[

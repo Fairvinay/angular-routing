@@ -9,7 +9,7 @@ export class Paytmchecksum {
 
 encryptSecretKey: string = '!AlG9%OnEGCAzlBs';
 iv: string = '@@@@&&&&####$$$$';
-salt: string = CryptoJS.lib.WordArray.random(16);
+salt: any = CryptoJS.lib.WordArray.random(16);
 
   constructor() {
 
@@ -36,12 +36,13 @@ salt: string = CryptoJS.lib.WordArray.random(16);
   }
 
  public  decryptData(data) {
-    var cipherParams = CryptoJS.lib.CipherParams.create({
+    /*var cipherParams = CryptoJS.lib.CipherParams.create({
                 ciphertext: CryptoJS.enc.Base64.parse(data)
                 });
+                */
     try {
      var decrypted = CryptoJS.AES.decrypt(
-                  cipherParams,
+                  data,
                   this.encryptSecretKey,
                   { iv: this.iv, 
                     padding: CryptoJS.pad.Pkcs7,
@@ -50,7 +51,7 @@ salt: string = CryptoJS.lib.WordArray.random(16);
       console.log('decrypted='+descrString);
       // const bytes = CryptoJS.AES.decrypt(data, this.encryptSecretKey);
       if (descrString)  {
-         return JSON.parse(descrString.toString(CryptoJS.enc.Utf8));
+         return JSON.parse( CryptoJS.enc.Utf8.parse(descrString));
       }
       return data;
     } catch (e) {
@@ -98,7 +99,7 @@ public async generateSignatureByString(params, key) {
                 console.log(' words ' + JSON.stringify(words));
                  var buf  = words.words;// CryptoJS.enc.Utf8.stringify(words.words);
                  console.log(' buf ' + buf);
-                  var salt = buf.toString("base64");
+                  var salt = buf.toString();
                  console.log(' salt ' + JSON.stringify(salt));
       return salt;
   } 

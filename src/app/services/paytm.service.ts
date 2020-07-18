@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient , HttpHeaders} from '@angular/common/http';
 import { Md5 } from 'ts-md5/dist/md5';
-import * as variable from 'paytmChecksum';
+//import * as variable from 'paytmChecksum';
 import { Paytmchecksum } from './paytmchecksum';
 import {BehaviorSubject, Observable, Subject, Subscriber , of } from 'rxjs';
 import { map , first , defaultIfEmpty , tap} from 'rxjs/operators';

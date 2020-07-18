@@ -1,6 +1,12 @@
 "use strict";
+//import * as crypto from "crypto";
 
-var crypto = require('crypto');
+let  crypto;
+ try { 
+    crypto = require('crypto');
+    } catch (e) {
+     console.log("crypto not defined");
+  }
 
 class PaytmChecksum {
 
