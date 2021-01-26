@@ -1,0 +1,17 @@
+.job-banner-example  {
+
+    position: relative;
+    display: inline-block; 
+    font-size: 8px;
+    border-style: solid;
+    border-color: #b3b3b3;
+    border-radius: 2px;
+    font-family: 'Font Awesome 5 Brands', 'Font Awesome 5 Free ', "Verdana", Ms-Serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: auto;
+    font-variant: normal;
+    
+
+
+
+}

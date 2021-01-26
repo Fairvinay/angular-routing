@@ -1,0 +1,7 @@
+https://localhost:4200/fileupload/
+
+https://localhost:4200/paramsettings/
+
+https://localhost:4200/jobpostings/
+
+https://angular.io/guide/dynamic-component-loader
