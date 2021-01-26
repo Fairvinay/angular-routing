@@ -4,7 +4,9 @@ import {PositionItem } from '../../common/adcomp/position-item'
 
 import { JobPositionComponent } from './job-position.component'
 
- @Injectable()
+ @Injectable({
+    providedIn :"root"
+ })
  export class PositionService {
 
     getPositions () {

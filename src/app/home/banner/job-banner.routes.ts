@@ -7,3 +7,4 @@ export const JobBannerRoutes: Route[] = [
     component: JobBannerComponent
   }
 ];
+ 
