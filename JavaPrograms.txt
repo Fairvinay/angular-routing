@@ -1,0 +1,23 @@
+import java.util.*; 
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		
+		StringBuffer dt = new StringBuffer("Hello World");
+		dt.insert(6, "Good ");
+		System.out.println(dt);
+		
+		List a = Arrays.asList("arer", "arerae");
+		
+		ListIterator b = a.listIterator();
+		if(b.previousIndex()!= -1)
+		  while(b.hasNext())
+		   System.out.println(b.next()+ " " );
+		else 
+		   System.out.println("EMPTY");
+		
+		
+		
+	}
+}
